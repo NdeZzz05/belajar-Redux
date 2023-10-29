@@ -13,5 +13,22 @@ https://react-redux.js.org/tutorials/quick-start
   - Redux ./action , ./reduxHandle, ./store
   - index.js
   - components (semua button dan view)
+3. untuk branch main/ versi 1 ini adalah settingan redux sederhana yang sudah bisa digunakan, akan tetapi belom standart company dan best practice
 
 ### `branch versi2`
+● react-redux → $ npm install react-redux
+● redux → $ npm install redux
+● @reduxjs/toolkit → $ npm install @reduxjs/toolkit
+
+1. Konfigurasi dengan menggunakan redux toolkit
+2. File yang digunakan:
+   - redux
+       - actions
+       - reducers
+         -index.js
+       - store
+    - pages
+        - authRedux
+    - components
+        - protected
+3. untuk yang versi2 ini settingan memakai redux toolkit yang sudah implementasi redux thunk dan middleware, ini sudah standart company dan best practice, tetapi belum yang paling baik
