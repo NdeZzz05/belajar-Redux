@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import emberReducer from "../action/manipulasiEmber";
-import kotakMakeUp from "../action/kotakMakeUp";
+import thunk from "redux-thunk";
+import rootReducer from "../reducers";
 
 export default configureStore({
-  reducer: {
-    // ember: emberReducer,
-    kotak: kotakMakeUp,
-  },
+  // ember ember yang kita simpan
+  reducer: rootReducer,
+
+  // kalian sudah menggunakan redux thunk untuk menjadi middleware
+  middleware: (getMiddleware) => getMiddleware().concat(thunk),
 });
