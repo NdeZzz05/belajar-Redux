@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// versi 2, initialstate dipisah agar terlihat lebih rapih
 const initialState = {
   token: undefined,
   isLogin: "",
@@ -18,11 +19,11 @@ const authLoginSlice = createSlice({
     },
     setUser: (state, action) => {
       state.user = action.payload;
-      console.log(state.user, "ini user");
     },
   },
 });
 
+// mengekspor reducersnya akan digunakan
 export const { setToken, setIsLoggedIn, setUser } = authLoginSlice.actions;
 
 export default authLoginSlice.reducer;

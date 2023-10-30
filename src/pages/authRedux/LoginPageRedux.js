@@ -7,6 +7,7 @@ export const LoginPageRedux = () => {
   const [Email, setEmail] = useState("");
 
   const dispatch = useDispatch();
+  console.log(LoginUser, "ini login user");
 
   const handleInput = (e) => {
     if (e) {

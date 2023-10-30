@@ -2,6 +2,7 @@ import { API_ENDPOINT } from "../../utils/api-endpoint";
 import http2 from "../../utils/http2";
 import { CookieKeys, CookieStorage } from "../../utils/cookies";
 import { setIsLoggedIn, setToken, setUser } from "../reducers/auth/authLogin";
+import { toast } from "react-toastify";
 
 // default setupnya redux bawan dari redux kalo kita mau pakek dispath
 // ya kayak gini mangilanya
@@ -18,6 +19,7 @@ export const LoginUser = (input) => (dispatch) => {
       dispatch(setToken(result.data.data.token));
       dispatch(setIsLoggedIn(true));
       dispatch(setUser(input));
+      alert("berhasil");
       if (result.data.data.token) {
         window.location.href = "/homepage";
       }
