@@ -7,4 +7,5 @@ export default configureStore({
     // ember: emberReducer,
     kotak: kotakMakeUp,
   },
+  devTools: process.env.NODE_ENV !== "production",
 });

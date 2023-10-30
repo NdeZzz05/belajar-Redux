@@ -6,7 +6,7 @@ import { AllMovie } from "../pages/AllMovie";
 import { SearchMovie } from "../pages/SearchMovie";
 import { RegisterPage } from "../pages/auth/RegisterPage";
 // import { ReduxPage } from "../Redux/reduxHandle/ReduxPage";
-import { ReduxMakeUp } from "../Redux/reduxHandle/ReduxMakeUp";
+import { ReduxMakeUp } from "../redux/reduxHandle/ReduxMakeUp";
 
 export const RouterList = () => {
   return (

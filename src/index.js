@@ -8,7 +8,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import { SkeletonTheme } from "react-loading-skeleton";
 import { Provider } from "react-redux";
 // KITA SUDAH MENGGUNAKAN WADAH YANG KITA PUNYA
-import store from "./Redux/store/store";
+import store from "./redux/store/store";
 
 const queryMovie = new QueryClient();
 

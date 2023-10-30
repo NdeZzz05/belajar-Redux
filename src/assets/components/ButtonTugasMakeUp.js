@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { kurangiMakeUp, tambahMakeUp, gantiBrand, hapusListBedak, tambahListBedak } from "../../Redux/action/kotakMakeUp";
+import { kurangiMakeUp, tambahMakeUp, gantiBrand, hapusListBedak, tambahListBedak } from "../../redux/action/kotakMakeUp";
 
 export const ButtonTugasMakeUp = () => {
   const dispatch = useDispatch();
