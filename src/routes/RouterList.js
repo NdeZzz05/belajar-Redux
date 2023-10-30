@@ -21,8 +21,9 @@ export const RouterList = () => {
         <Route
           path="/homepage"
           element={
-            // <TokenProtected>
-            <HomePage />
+            <TokenProtected>
+              <HomePage />
+            </TokenProtected>
           }
         ></Route>
         <Route path="/detail/:id" element={<DetailsMovie />}></Route>

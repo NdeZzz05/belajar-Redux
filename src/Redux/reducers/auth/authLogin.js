@@ -12,13 +12,13 @@ const authLoginSlice = createSlice({
   initialState,
   reducers: {
     setToken: (state, action) => {
-      state.token = action.payload;
+      state = { ...state, token: action.payload };
     },
     setIsLoggedIn: (state, action) => {
-      state.isLogin = action.payload;
+      state = { ...state, isLogin: action.payload };
     },
     setUser: (state, action) => {
-      state.user = action.payload;
+      state = { ...state, user: action.payload };
     },
   },
 });

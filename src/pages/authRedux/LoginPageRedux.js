@@ -5,9 +5,10 @@ import { LogOut, LoginUser } from "../../redux/actions/authLogin";
 export const LoginPageRedux = () => {
   const [Password, setPassword] = useState("");
   const [Email, setEmail] = useState("");
+  const Data = useSelector((state) => state.auth);
+  console.log(Data, "token protected");
 
   const dispatch = useDispatch();
-  console.log(LoginUser, "ini login user");
 
   const handleInput = (e) => {
     if (e) {

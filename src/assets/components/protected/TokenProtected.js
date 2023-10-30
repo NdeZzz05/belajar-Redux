@@ -7,13 +7,11 @@ function TokenProtected({ children }) {
   const Data = useSelector((state) => state.auth);
   console.log(Data, "token protected");
 
-  useEffect(() => {
-    if (Data.token === undefined) {
-      navigate("/");
-    }
-  }, []);
-
-  console.log(children);
+  // useEffect(() => {
+  //   if (Data.token === undefined) {
+  //     window.location.href = "/";
+  //   }
+  // }, []);
 
   return children;
 }

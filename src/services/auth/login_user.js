@@ -3,20 +3,24 @@ import { API_ENDPOINT } from "../../utils/api-endpoint";
 import { CookieKeys, CookieStorage } from "../../utils/cookies";
 import http2 from "../../utils/http2";
 
-const LoginUser = async (input) => {
-  return await http2
-    .post(API_ENDPOINT.LOGIN_USER, input)
-    .then((result) => {
-      CookieStorage.set(CookieKeys.AuthToken, result.data.data.token);
-      return result;
-    })
-    .catch((err) => {
-      return err;
-    });
+export const reduxLoginUser = async (input) => {
+  return await http2.post(API_ENDPOINT.LOGIN_USER, input);
 };
 
-const useLoginUser = () => {
-  return useMutation(LoginUser);
-};
+// const LoginUser = async (input) => {
+//   return await http2
+//     .post(API_ENDPOINT.LOGIN_USER, input)
+//     .then((result) => {
+//       CookieStorage.set(CookieKeys.AuthToken, result.data.data.token);
+//       return result;
+//     })
+//     .catch((err) => {
+//       return err;
+//     });
+// };
 
-export { LoginUser, useLoginUser };
+// const useLoginUser = () => {
+//   return useMutation(LoginUser);
+// };
+
+// export { LoginUser, useLoginUser };

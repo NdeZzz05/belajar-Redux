@@ -13,11 +13,7 @@ const http2 = axios.create({
 http2.interceptors.request.use((config) => {
   config.headers = {
     ...config.headers,
-    Authorization: `Bearer ${
-      CookieStorage.get(CookieKeys.AuthToken)
-        ? CookieStorage.get(CookieKeys.AuthToken)
-        : ""
-    }`,
+    Authorization: `Bearer ${CookieStorage.get(CookieKeys.AuthToken) ? CookieStorage.get(CookieKeys.AuthToken) : ""}`,
   };
   return config;
 });
